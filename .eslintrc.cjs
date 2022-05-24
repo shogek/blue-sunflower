@@ -7,7 +7,7 @@ module.exports = {
     "plugin:vue/vue3-essential",
     "eslint:recommended",
     "@vue/eslint-config-typescript/recommended",
-    "@vue/eslint-config-prettier",
+    // "@vue/eslint-config-prettier",
   ],
   env: {
     "vue/setup-compiler-macros": true,
@@ -18,4 +18,8 @@ module.exports = {
       extends: ["plugin:cypress/recommended"],
     },
   ],
+  rules: {
+    semi: ["error", "always"],
+    "linebreak-style": ["error", "windows"],
+  },
 };

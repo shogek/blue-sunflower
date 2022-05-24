@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "@/components/HelloWorld.vue";
+import ReloadPrompt from './components/reload-prompt/ReloadPrompt.vue';
 </script>
 
 <template>
@@ -23,6 +24,7 @@ import HelloWorld from "@/components/HelloWorld.vue";
     </div>
   </header>
 
+  <ReloadPrompt />
   <RouterView />
 </template>
 
