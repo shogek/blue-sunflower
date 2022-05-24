@@ -10,6 +10,13 @@ export default defineConfig({
   plugins: [
     vue(),
     VitePWA({
+      /* https://rubenr.dev/en/pwa-vite/ */
+      base: "/",
+      srcDir: "src",
+      filename: "sw.ts",
+      mode: "development",
+      strategies: "injectManifest",
+
       /* https://vite-plugin-pwa.netlify.app/guide/prompt-for-update.html#generate-sw-source-map */
       workbox: {
         sourcemap: true,
@@ -27,6 +34,10 @@ export default defineConfig({
         short_name: "Blue Sunflower",
         description: "Doops tracks his sport while Boops cheers him on!",
         theme_color: "#2d89ef" /* blue */,
+
+        /* https://rubenr.dev/en/pwa-vite/ */
+        start_url: "/",
+        display: "standalone",
       },
       icons: [
         {
