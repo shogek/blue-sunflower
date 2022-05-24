@@ -11,7 +11,7 @@ export default defineConfig({
     vue(),
     VitePWA({
       /* https://rubenr.dev/en/pwa-vite/ */
-      base: "/",
+      base: "/blue-sunflower/",
       srcDir: "src",
       filename: "sw.ts",
       mode: "development",
