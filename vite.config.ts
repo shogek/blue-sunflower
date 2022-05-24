@@ -10,6 +10,12 @@ export default defineConfig({
   plugins: [
     vue(),
     VitePWA({
+      /* https://vite-plugin-pwa.netlify.app/guide/prompt-for-update.html#generate-sw-source-map */
+      workbox: {
+        sourcemap: true,
+      },
+
+      /* https://vite-plugin-pwa.netlify.app/guide/generate.html */
       includeAssets: [
         "favicon.svg",
         "favicon.ico",

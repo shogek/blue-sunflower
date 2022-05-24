@@ -3,7 +3,8 @@
   "exclude": [],
   "compilerOptions": {
     "composite": true,
-    "lib": [],
+    /* "DOM" value allows `console.log` statements */
+    "lib": ["DOM"],
     "types": ["node", "jsdom"]
   }
 }
