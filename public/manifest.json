@@ -1,12 +1,16 @@
 {
     "name": "Blue Sunflower",
     "short_name": "Blue Sunflower",
+
     "start_url":"/blue-sunflower/",
-    "display":"standalone",
-    "background_color":"#ffffff",
-    "lang":"en",
     "scope":"/blue-sunflower/",
+
+    "lang":"en",
+    "display":"standalone",
+
+    "background_color":"#ffffff",
     "theme_color":"#fecf43",
+
     "icons": [
         {
             "src": "./img/icons/android-chrome-192x192.png",
