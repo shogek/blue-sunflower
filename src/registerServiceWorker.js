@@ -2,8 +2,11 @@
 
 import { register } from "register-service-worker";
 
+console.log('IM IN WORKER');
+
 // eslint-disable-next-line no-undef
 if (process.env.NODE_ENV === "production") {
+  console.log('IM IN PRODUCTION');
   // eslint-disable-next-line no-undef
   // register(`${process.env.BASE_URL}service-worker.js`, {
   register(`/blue-sunflower/service-worker.js`, {
@@ -35,3 +38,5 @@ if (process.env.NODE_ENV === "production") {
     },
   });
 }
+
+console.log('IM FINISHED');
