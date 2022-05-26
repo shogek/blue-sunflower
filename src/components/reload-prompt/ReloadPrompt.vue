@@ -1,5 +1,5 @@
-<script setup lang="ts">
-import { useRegisterSW } from "virtual:pwa-register/vue";
+<!-- <script setup lang="ts">
+// import { useRegisterSW } from "virtual:pwa-register/vue";
 
 const {
   offlineReady,
@@ -60,4 +60,4 @@ const close = async () => {
   border-radius: 2px;
   padding: 3px 10px;
 }
-</style>
+</style> -->
