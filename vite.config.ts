@@ -43,20 +43,26 @@ export default defineConfig({
       },
       icons: [
         {
-          src: "./pwa-144x144.png",
+          src: "/pwa-144x144.png",
           sizes: "144x144",
           type: "image/png",
           purpose: "any maskable",
         },
         {
-          src: "pwa-192x192.png",
+          src: "/pwa-192x192.png",
           sizes: "192x192",
           type: "image/png",
         },
         {
-          src: "/blue-sunflower/pwa-512x512.png",
+          src: "/pwa-512x512.png",
           sizes: "512x512",
           type: "image/png",
+        },
+        {
+          src: "/pwa-512x512.png",
+          sizes: "512x512",
+          type: "image/png",
+          purpose: "any maskable",
         },
       ],
     }),
