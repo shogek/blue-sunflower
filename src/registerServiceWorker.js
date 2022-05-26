@@ -8,7 +8,7 @@ console.log('IM IN WORKER');
 if (process.env.NODE_ENV === "production") {
   console.log('IM IN PRODUCTION');
   // eslint-disable-next-line no-undef
-  register(`/service-worker.js`, {
+  register(`./service-worker.js`, {
   // register(`${process.env.BASE_URL}service-worker.js`, {
   // register(`/blue-sunflower/service-worker.js`, {
     ready() {
