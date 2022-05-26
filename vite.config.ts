@@ -29,6 +29,7 @@ export default defineConfig({
         "robots.txt",
         "apple-touch-icon.png",
         "pwa-512x512.png",
+        "pwa-192x192.png",
       ],
       manifest: {
         name: "Blue Sunflower",
@@ -42,20 +43,20 @@ export default defineConfig({
       },
       icons: [
         {
-          src: "pwa-192x192.png",
+          src: "/img/icons/pwa-144x144.png",
+          sizes: "144x144",
+          type: "image/png",
+          purpose: "any maskable",
+        },
+        {
+          src: "./img/icons/pwa-192x192.png",
           sizes: "192x192",
           type: "image/png",
         },
         {
-          src: "pwa-512x512.png",
+          src: "./public/img/icons/pwa-512x512.png",
           sizes: "512x512",
           type: "image/png",
-        },
-        {
-          src: "pwa-512x512.png",
-          sizes: "512x512",
-          type: "image/png",
-          purpose: "any maskable",
         },
       ],
     }),
