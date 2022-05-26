@@ -28,6 +28,7 @@ export default defineConfig({
         "favicon.ico",
         "robots.txt",
         "apple-touch-icon.png",
+        "pwa-512x512.png",
       ],
       manifest: {
         name: "Blue Sunflower",
@@ -36,7 +37,7 @@ export default defineConfig({
         theme_color: "#2d89ef" /* blue */,
 
         /* https://rubenr.dev/en/pwa-vite/ */
-        start_url: "/",
+        start_url: "/blue-sunflower/",
         display: "standalone",
       },
       icons: [
