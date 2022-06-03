@@ -1,0 +1,32 @@
+{
+    "name": "Blue Sunflower",
+    "short_name": "Blue Sunflower",
+
+    "start_url":"/blue-sunflower/",
+    "scope":"/blue-sunflower/",
+
+    "lang":"en",
+    "display":"standalone",
+
+    "background_color":"#ffffff",
+    "theme_color":"#fecf43",
+
+    "icons": [
+        {
+            "src": "./img/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./img/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "./img/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
