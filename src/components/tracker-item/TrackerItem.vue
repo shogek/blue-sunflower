@@ -26,11 +26,13 @@ defineProps<{
 
 <style scoped>
 .wrapper {
+    --gap: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 16px;
+    gap: var(--gap);
     width: 47.8%;
+    width: calc((100% - var(--gap)) / 2);
     padding: 16px;
     border-radius: 8px;
     border: var(--card-border);
