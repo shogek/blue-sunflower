@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import ExcerciseList from './components/excercise-list/ExcerciseList.vue';
-import TrackerList from './components/tracker-list/TrackerList.vue';
+import ExcerciseList from './components/ExcerciseList.vue';
+import TrackerList from './components/TrackerList.vue';
+import BadgeList from './components/BadgeList.vue';
 </script>
 
 <template>
   <div class="wrapper">
+    <BadgeList />
     <TrackerList />
     <ExcerciseList />
   </div>

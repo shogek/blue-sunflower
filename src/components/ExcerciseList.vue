@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ExcerciseItem from "../excercise-item/ExcerciseItem.vue";
+import ExcerciseItem from "./ExcerciseItem.vue";
 </script>
 
 <template>

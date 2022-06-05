@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TrackerItem from "../tracker-item/TrackerItem.vue";
+import TrackerItem from "./TrackerItem.vue";
 </script>
 
 <template>

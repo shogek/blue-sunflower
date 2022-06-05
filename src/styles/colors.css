@@ -5,6 +5,7 @@
     --color-heading: #464646;
     --color-subheading: #8B8B8B;
 
+    --gradient-disabled: linear-gradient(90deg, rgb(219, 219, 219) 0%, rgb(192, 193, 199) 100%);
     --gradient-information: linear-gradient(90deg, #BEE1FF 0%, #BECCFF 100%);
 
     --card-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
@@ -19,6 +20,7 @@
         --color-heading: #BEBEBE;
         --color-subheading: #727272;
 
+        --gradient-disabled: linear-gradient(90deg, rgb(78, 78, 78) 0%, rgb(102, 102, 102) 100%);
         --gradient-information: linear-gradient(90deg, #456D8F 0%, #3F508B 100%);
 
         --card-box-shadow: none;
