@@ -3,10 +3,18 @@ import IconPizza from './IconPizza.vue';
 import IconHouse from './IconHouse.vue';
 
 defineProps<{
-    iconName: 'house' | 'pizza'
+    iconName: string
 }>();
 </script>
 
 <template>
-    <component :is="iconName === 'house' ? IconHouse : IconPizza" />
+    <component class="icon-wrapper" :is="iconName === 'house' ? IconHouse : IconPizza" />
 </template>
+
+<style scoped>
+
+.icon-wrapper {
+    color: var(--icon-color);
+}
+
+</style>

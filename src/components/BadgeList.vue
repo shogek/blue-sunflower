@@ -6,22 +6,30 @@ import BadgeItem from './BadgeItem.vue';
     <div>
         <h2> Badges </h2>
 
-        <div>
+        <div class="list">
             <BadgeItem
-                icon=""
+                icon="house"
                 label="Worked from home"
-                :isEnabled="false"
+                type="info"
+                :isActive="false"
             />
 
             <BadgeItem
-                icon=""
+                icon="pizza"
                 label="Fasted for 16 hours!"
-                :isEnabled="false"
+                type="success"
+                :isActive="true"
             />
         </div>
     </div>
 </template>
 
-<styles scoped>
+<style scoped>
 
-</styles>
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+</style>

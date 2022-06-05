@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Icon from "./icons/Icon.vue";
+import Toggle from "./Toggle.vue";
 
 defineProps<{
     /** TODO: Name of the icon? */
@@ -7,40 +8,50 @@ defineProps<{
     /** Ex.: "Worked from home" */
     label: string
     /** Whether toggled on or off */
-    isEnabled: boolean
+    isActive: boolean
+    /** Different types only differs in background colors */
+    type: 'info' | 'success'
 }>();
 </script>
 
 <template>
-    <div class="wrapper">
-        <div>
-            <Icon :name="icon" />
-        </div>
-        <p class="label">
+    <div
+        class="badge-item-wrapper"
+        :class="{info: type === 'info', success: type === 'success'}"
+    >
+        <Icon :iconName="icon" />
+        <h4 class="label">
             {{ label }}
-        </p>
-        <div v-if="isEnabled">
-            ON
-        </div>
-        <div v-else>
-            OFF
-        </div>
+        </h4>
+        <Toggle :isActive="isActive" />
     </div>
 </template>
 
 <style scoped>
 
-.wrapper {
+.badge-item-wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    gap: unset;
+    padding: 20px 16px;
+    border-radius: 8px;
     border: var(--card-border);
     box-shadow: var(--card-box-shadow);
     background: var(--gradient-disabled);
 }
 
-.label {
-    color: var(--color-heading);
+.badge-item-wrapper.info {
+    background: var(--gradient-information);
+}
+
+.badge-item-wrapper.success {
+    background: var(--gradient-success);
+}
+
+.badge-item-wrapper .label {
+    color: rgba(0, 0, 0, 0.6);
 }
 
 </style>
