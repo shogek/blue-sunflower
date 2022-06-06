@@ -1,34 +1,45 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import Icon from "./icons/Icon.vue";
 import Toggle from "./Toggle.vue";
 
-defineProps<{
+const props = defineProps<{
     /** TODO: Name of the icon? */
     icon: 'house' | 'pizza'
     /** Ex.: "Worked from home" */
     label: string
     /** Whether toggled on or off */
-    isActive: boolean
+    isEnabled: boolean
     /** Different types only differs in background colors */
     type: 'info' | 'success'
 }>();
+
+function handleToggle() {
+    isOn.value = !isOn.value;
+}
+
+const isOn = ref(props.isEnabled);
 </script>
 
 <template>
-    <div class="badge-item-wrapper" :class="{info: type === 'info', success: type === 'success'}">
+    <div
+        class="badge-item-wrapper"
+        :class="{
+            disabled: !isOn,
+            info: type === 'info' && isOn,
+            success: type === 'success' && isOn
+    }">
         <div class="group">
             <Icon :iconName="icon" />
             <h4 class="label">
                 {{ label }}
             </h4>
         </div>
-        <Toggle :isActive="isActive" />
+        <Toggle :isEnabled="isOn" :isTransparent="true" @toggle="handleToggle" />
     </div>
 </template>
 
 <style scoped>
-
-
 
 .badge-item-wrapper {
     display: flex;
@@ -47,6 +58,10 @@ defineProps<{
     display: flex;
     flex-direction: row;
     gap: 16px;
+}
+
+.badge-item-wrapper.disabled {
+    background: var(--gradient-disabled);
 }
 
 .badge-item-wrapper.info {

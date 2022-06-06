@@ -1,13 +1,30 @@
 <script setup lang="ts">
 defineProps<{
-    isActive: boolean
+    isEnabled: boolean
+    /** Is the toggle being used on a badge that has a gradient background? */
+    isTransparent: boolean
 }>();
 
+const emit = defineEmits<{
+    (e: 'toggle'): void
+}>();
+
+
+function handleClick() {
+    emit('toggle');
+}
 </script>
 
 <template>
-    <div class="toggle-wrapper on" v-if="isActive" />
-    <div class="toggle-wrapper off" v-if="!isActive" />
+    <div
+        class="toggle-wrapper"
+        :class="{
+            on: isEnabled,
+            off: !isEnabled,
+            transparent: isTransparent
+        }"
+        @click="handleClick"
+    />
 </template>
 
 <style scoped>
@@ -15,7 +32,6 @@ defineProps<{
 .toggle-wrapper {
     height: 1.2em;
     width: 2.5em;
-    /* background-color: var(--toggle-background-color); */
     border-radius: 15px;
     transition: all ease-in;
 }
@@ -26,6 +42,14 @@ defineProps<{
 
 .toggle-wrapper.off {
     background-color: var(--toggle-off-background-color);
+}
+
+.toggle-wrapper.on.transparent {
+    background-color: var(--toggle-transparent-on-background-color);
+}
+
+.toggle-wrapper.off.transparent {
+    background-color: var(--toggle-transparent-off-background-color);
 }
 
 .toggle-wrapper.on::before,
@@ -47,6 +71,14 @@ defineProps<{
 
 .toggle-wrapper.off::before {
     background-color: var(--toggle-off-knob-color);
+}
+
+.toggle-wrapper.on.transparent::before {
+    background-color: var(--toggle-transparent-on-knob-color);
+}
+
+.toggle-wrapper.off.transparent::before {
+    background-color: var(--toggle-transparent-off-knob-color);
 }
 
 </style>

@@ -11,14 +11,14 @@ import BadgeItem from './BadgeItem.vue';
                 icon="house"
                 label="Worked from home"
                 type="info"
-                :isActive="false"
+                :isEnabled="false"
             />
 
             <BadgeItem
                 icon="pizza"
                 label="Fasted for 16 hours!"
                 type="success"
-                :isActive="true"
+                :isEnabled="true"
             />
         </div>
     </div>
