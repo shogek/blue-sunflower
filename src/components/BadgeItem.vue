@@ -15,19 +15,20 @@ defineProps<{
 </script>
 
 <template>
-    <div
-        class="badge-item-wrapper"
-        :class="{info: type === 'info', success: type === 'success'}"
-    >
-        <Icon :iconName="icon" />
-        <h4 class="label">
-            {{ label }}
-        </h4>
+    <div class="badge-item-wrapper" :class="{info: type === 'info', success: type === 'success'}">
+        <div class="group">
+            <Icon :iconName="icon" />
+            <h4 class="label">
+                {{ label }}
+            </h4>
+        </div>
         <Toggle :isActive="isActive" />
     </div>
 </template>
 
 <style scoped>
+
+
 
 .badge-item-wrapper {
     display: flex;
@@ -35,11 +36,17 @@ defineProps<{
     align-items: center;
     justify-content: space-between;
     gap: unset;
-    padding: 20px 16px;
+    padding: 20px 20px;
     border-radius: 8px;
-    border: var(--card-border);
-    box-shadow: var(--card-box-shadow);
+    border: var(--badge-border);
+    box-shadow: var(--badge-box-shadow);
     background: var(--gradient-disabled);
+}
+
+.badge-item-wrapper .group {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
 }
 
 .badge-item-wrapper.info {
@@ -51,7 +58,7 @@ defineProps<{
 }
 
 .badge-item-wrapper .label {
-    color: rgba(0, 0, 0, 0.6);
+    color: var(--badge-text-color);
 }
 
 </style>

@@ -14,6 +14,8 @@ defineProps<{
 <style scoped>
 
 .icon-wrapper {
+    width: auto;
+    height: 26px;
     color: var(--icon-color);
 }
 
